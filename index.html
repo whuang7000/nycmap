@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Hexagon Map</title>
+    <style>
+        #map {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+        }
+        .tooltip {
+            position: absolute;
+            z-index: 10;
+            background-color: white;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            pointer-events: none;
+            font-size: 12px;
+            max-width: 300px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .manhattan-boundary {
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Load D3.js and TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="map.js"></script>
+</body>
+</html> 
