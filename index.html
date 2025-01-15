@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NYC Hexagon Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         #map {
-            width: 800px;
-            height: 600px;
-            margin: 0 auto;
+            height: 100vh;
+            width: 100%;
         }
-        .tooltip {
-            position: absolute;
-            z-index: 10;
-            background-color: white;
-            padding: 5px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            pointer-events: none;
-            font-size: 12px;
-            max-width: 300px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        body {
+            margin: 0;
+            padding: 0;
         }
-        .manhattan-boundary {
-            pointer-events: none;
+        .legend {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        .legend-item {
+            margin: 5px 0;
+        }
+        .legend-color {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
         }
     </style>
 </head>
 <body>
     <div id="map"></div>
-
-    <!-- Load D3.js and TopoJSON -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://unpkg.com/topojson@3"></script>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
     <script src="map.js"></script>
 </body>
-</html> 
+</html>
